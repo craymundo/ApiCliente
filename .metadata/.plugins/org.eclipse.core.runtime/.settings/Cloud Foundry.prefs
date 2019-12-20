@@ -1,0 +1,4 @@
+//manuel.fiestas@unmsm.edu.pe\ \:\ https\://api.run.pivotal.io\ \:\ ManuelFiestas\ \:\ ApiClientes\:AClientes\:CF_JMX_ENABLED=false
+//manuel.fiestas@unmsm.edu.pe\ \:\ https\://api.run.pivotal.io\ \:\ ManuelFiestas\ \:\ ApiClientes\:AClientes\:PROJECT_NAME=Clientes
+eclipse.preferences.version=1
+runTargets=[{"storeCredentials"\:"STORE_NOTHING","runTargetID"\:"manuel.fiestas@unmsm.edu.pe \: https\://api.run.pivotal.io \: ManuelFiestas \: ApiClientes","selfsigned"\:"false","organization"\:"ManuelFiestas","skipSslValidation"\:"false","organization_guid"\:"df627f4a-f2f0-4fa6-aa58-80ad9b43ad49","space_guid"\:"e6aeca7c-c362-4e48-8edb-c4fa3f8aa285","url"\:"https\://api.run.pivotal.io","space"\:"ApiClientes","username"\:"manuel.fiestas@unmsm.edu.pe"}]
