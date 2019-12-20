@@ -50,9 +50,9 @@ public class ClienteServiceImpl implements IClienteService {
 	}
 
 	@Override
-	public double d() {
+	public double desviacion() {
 		// TODO Auto-generated method stub
-		return clienteDao.d();
+		return clienteDao.desviacion();
 	}
 
 	

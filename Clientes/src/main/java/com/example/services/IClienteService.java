@@ -18,6 +18,6 @@ public interface IClienteService {
 	
 	public double promedio();
 	
-	public double d();
+	public double desviacion();
 	
 }

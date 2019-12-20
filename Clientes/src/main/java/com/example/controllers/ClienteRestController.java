@@ -42,7 +42,7 @@ public class ClienteRestController {
 		return clienteService.findAll();
 	}
 	
-	@PostMapping("")
+	@PostMapping("/crearcliente")
 	@ResponseStatus(HttpStatus.CREATED)
 	public Cliente crear(@RequestBody Cliente cliente) {
 		return clienteService.save(cliente);
@@ -67,24 +67,18 @@ public class ClienteRestController {
 	}
 	
 	
-	@GetMapping("/promedio")
+	@GetMapping("/kpiclientes")
 	public HashMap<String, Object> get() {
 	    HashMap<String, Object> map = new HashMap<>();
 	    map.put("promedio", clienteService.promedio());
-	    map.put("clientes", clienteService.count());
+	    map.put("desviacionEstandar", clienteService.desviacion());
 	    return map;
 	}
 	
-	@GetMapping("/desviacion")
-	public HashMap<String, Object> desviacionEstandar() {
-	    HashMap<String, Object> map = new HashMap<>();
-	    map.put("promedio", clienteService.promedio());
-	    map.put("desviacionEstandar", clienteService.d());
-	    return map;
-	}
+	
 	
 
-	@GetMapping(value="/muerte")
+	@GetMapping(value="/listclientes")
 	@ResponseBody public ResponseEntity<Object> getAll() throws JSONException {
 	    List<Cliente> entityList = clienteService.findAll();
 	    List<Object> entities = new ArrayList<Object>();
@@ -100,7 +94,7 @@ public class ClienteRestController {
 	        cal.setTime(cliente.getFnacimiento());
 	        cal.add(Calendar.YEAR, 74);
 	        Date date = cal.getTime(); 
-	    	mMap.put("fmuerte", simpleDateFormat.format(date));
+	    	mMap.put("fprobablemuerte", simpleDateFormat.format(date));
 	    	entities.add(mMap); 
 	    }
 	    return new ResponseEntity<Object>(entities, HttpStatus.OK);
